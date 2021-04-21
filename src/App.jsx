@@ -42,13 +42,13 @@ const App = () => {
         setTodos(newTodos)
     }
 
-    const editTodo = (id, todop) => {
+    const editTodo = (id, todop, newDate) => {
         const newTodos = todos.map(todoitem => {
             if(todoitem.id === id) {
-                return {...todoitem, todo: todop }
+                return {...todoitem, todo: todop, date: newDate }
             }
             return todoitem
-        });
+        })
         setTodos(newTodos)
     }
 
@@ -57,19 +57,20 @@ const App = () => {
             <h1>To Do App</h1>
             <p className="subtitle">What needs to be done?</p>
             <p>New task</p>
-            <Formulario todos={todos} setTodos={setTodos} />
+            <Formulario todos={todos} setTodos={setTodos}/>
             <section id="filters">
                 {filterkeys.map(filterKey => (
                     <button key={filterKey} onClick={() => setFilter(filterKey)}>{filterKey} tasks</button>
                 ))}
             </section>
             <section id="todo-list">
-                {todos.length > 0 ? todos.filter(FILTER_MAP[filter]).map(({ id, todo, completed}) => (
+                {todos.length > 0 ? todos.filter(FILTER_MAP[filter]).map(({ id, todo, completed, date}) => (
                     <TodoItem
                         key={id}
                         id={id}
                         todo={todo}
                         completed={completed}
+                        date = {date}
                         handleChangeCompletedTodo={handleChangeCompletedTodo}
                         deleteTodo={deleteTodo}
                         editTodo={editTodo}

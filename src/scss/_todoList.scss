@@ -29,6 +29,11 @@
       font-size: 1rem;
     }
 
+    .show {
+      text-decoration: line-through;
+      opacity: 0.8;
+    }
+
     input[type="checkbox"] {
       position: relative;
       cursor: pointer;

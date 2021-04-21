@@ -39,7 +39,7 @@ const TodoItem = ({ id, todo, completed, date, handleChangeCompletedTodo, delete
                     checked={completed}
                     onChange={() => handleChangeCompletedTodo(id)}
                 />
-                <label htmlFor={`todo-${id}`}>{todo}</label>
+                <label className={`todo-${id}`} htmlFor={`todo-${id}`}>{todo}</label>
                 <i className="far fa-edit" onClick={() => setIsEditing(true)}></i>
                 <i className="far fa-trash-alt" onClick={() => deleteTodo(id)}></i>
             </div>

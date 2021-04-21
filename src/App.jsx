@@ -30,6 +30,7 @@ const App = () => {
     const handleChangeCompletedTodo = (id) => {
         const newTodos = todos.map(todo => {
             if(todo.id === id) {
+                document.querySelector(`.todo-${id}`).classList.toggle('show')
                 return {...todo, completed: !todo.completed}
             }
             return todo

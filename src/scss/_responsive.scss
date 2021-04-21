@@ -1,0 +1,24 @@
+@media (max-width: 400px) {
+  body {
+    background-repeat: no-repeat;
+    background-size: 50rem 89rem;
+  }
+
+  main {
+    width: 21rem;
+  }
+
+  .form {
+    grid-template-columns: 13rem auto;
+  }
+
+  #todo-list {
+    .todo {
+      grid-template-columns: 1rem 10rem auto auto;
+    }
+
+    .items {
+      grid-template-columns: 11rem auto auto;
+    }
+  }
+}

@@ -15,5 +15,11 @@
     background-color: #f39591;
     color: white;
     border: 0.1rem solid white;
+    outline: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    opacity: 0.9;
   }
 }

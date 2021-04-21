@@ -13,9 +13,14 @@
     outline: none;
     border-radius: 0.2rem;
     font-weight: bold;
+    cursor: pointer;
   }
 
   button:focus {
     border: 1px solid white;
+  }
+
+  button:hover {
+    opacity: 0.9;
   }
 }

@@ -1,0 +1,21 @@
+#filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+
+  button {
+    background: #d9c1b8;
+    color: white;
+    border: none;
+    padding: 0.4rem;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 0.2rem;
+    font-weight: bold;
+  }
+
+  button:focus {
+    border: 1px solid white;
+  }
+}
